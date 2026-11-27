@@ -345,6 +345,11 @@ p{margin:0}
 .elig .btn.wa:hover{background:#08605C}
 .elig-ic{flex:none;width:42px;height:42px;border-radius:50%;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;font:700 20px Georgia,serif;font-style:italic}
 .elig-txt{flex:1;min-width:0}
+.lead-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:48px;align-items:center;margin-bottom:48px}
+.lead-head .sec-head{margin-bottom:0}
+.lead-photo{border-radius:28px;overflow:hidden;border:10px solid #fff;box-shadow:0 24px 60px rgba(194,24,122,.18);background:#fff}
+.lead-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 20%}
+@media (max-width:900px){.lead-head{grid-template-columns:1fr;gap:28px}.lead-photo{max-width:420px;border-width:6px;border-radius:20px}}
 .part{border-radius:30px;padding:clamp(20px,3.5vw,40px);margin-top:36px}
 .part-nsda{background:linear-gradient(160deg,#fff 0%,var(--teal-soft) 100%);border:2px solid var(--teal);box-shadow:0 24px 50px rgba(11,122,117,.14)}
 .part-nsda .nsda{box-shadow:none;border-color:#BFE0DC}
@@ -354,6 +359,27 @@ p{margin:0}
 .part-own .elig .btn.wa{background:var(--pink)}
 .part-own .elig .btn.wa:hover{background:var(--pink-dark)}
 .part .elig{margin-bottom:0}
+.own-head{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.own-head>*{min-width:0}
+.own-logo{width:190px;height:auto;flex:none;background:#fff;border-radius:22px;padding:14px 18px;box-shadow:0 12px 28px rgba(194,24,122,.14)}
+@media (max-width:620px){.own-head{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:16px}.own-logo{width:110px;padding:8px 10px;border-radius:14px;order:-1}
+  .sub-h{font-size:1.3rem!important}
+  .sub-logo{gap:10px}.sub-logo img{width:42px!important;height:42px!important}.sub-logo img.round{width:54px!important;height:54px!important}
+  .lead-photo{max-width:280px}
+  .part{padding:16px}
+  .nsda-facts .fact b{font-size:1.25rem}
+  #reviews .score{padding:18px 16px}
+  #reviews .score .big{font-size:2.6rem}
+  #reviews .score .btn{padding:10px 18px;font-size:14px}
+  #reviews .rev-list{gap:12px}
+  #reviews .rev{padding:16px;gap:8px;border-radius:16px}
+  #reviews .rev p{font-size:14.5px;line-height:1.55}
+  #reviews .rev .stars{font-size:14px}
+  #reviews .rev .reply{font-size:13px;padding:8px 10px}
+  #reviews .rev .who b{font-size:14px}
+  #reviews .rev .who small{font-size:12px}
+  #reviews .av{width:32px;height:32px;font-size:14px}
+  #reviews .staff{font-size:13.5px}}
 @media (max-width:520px){.part{border-radius:20px}}
 .sec-div{display:flex;align-items:center;gap:14px;margin:56px auto 44px;max-width:520px}
 .sec-div span{flex:1;height:1.5px;background:linear-gradient(90deg,transparent,#8FC7C1)}
@@ -879,7 +905,10 @@ p{margin:0}
     </div>
 
     <div class="part part-own">
-    <h3 class="sub-h sub-logo" style="margin-top:0"><img class="round" src="images/academy-logo.png" alt="Beautyfication Course by Exclusive, Kaniz Hair &amp; Beauty logo" width="300" height="296">Exclusive courses by Kaniz Sultana</h3>
+    <div class="own-head">
+    <h3 class="sub-h sub-logo" style="margin:0"><img class="round" src="images/academy-logo.png" alt="Beautyfication Course by Exclusive, Kaniz Hair &amp; Beauty logo" width="300" height="296">Exclusive courses by Kaniz Sultana</h3>
+    <img class="own-logo" src="images/exclusive-logo-pink.png" alt="Exclusive, Kaniz Hair &amp; Beauty logo" width="700" height="597" loading="lazy">
+    </div>
     <div class="courses" style="margin-top:0">
       <div class="course">
         <div class="dur"><b>1</b><span>month</span></div>
@@ -1108,10 +1137,13 @@ p{margin:0}
 
 <section class="section blush" id="leadership">
   <div class="wrap">
+    <div class="lead-head">
     <div class="sec-head">
       <span class="tag">Community &amp; leadership</span>
       <h2>Serving Khulna <span>beyond the parlor</span></h2>
       <p>Kaniz Sultana is an active leader in Rotary, Inner Wheel, the women's chamber of commerce and Bangladesh's beauty industry.</p>
+    </div>
+    <div class="lead-photo"><img src="images/kaniz-lounge.jpg" alt="Kaniz Sultana seated in the parlor lounge in a black and gold embroidered abaya" loading="lazy"></div>
     </div>
     <div class="lead-grid">
       <div class="box">
