@@ -303,11 +303,14 @@ p{margin:0}
 .acad-photo img{display:block;width:100%;height:auto;border-radius:16px}
 .acad-photo figcaption{font-size:14px;color:var(--text);padding:10px 8px 4px;text-align:center}
 @media (max-width:900px){.acad-head{grid-template-columns:1fr;gap:24px}}
-.class-strip{display:grid;grid-template-columns:.9fr 1fr 1fr;gap:20px;align-items:center;margin-bottom:44px}
+.class-strip{display:grid;grid-template-columns:.9fr 1fr 1fr;gap:22px;align-items:center;margin-bottom:44px;padding:30px;border-radius:28px;background:linear-gradient(135deg,#FFFFFF 0%,var(--teal-soft) 100%);border:2px solid var(--teal);box-shadow:0 24px 50px rgba(11,122,117,.18)}
+.class-strip .tag.teal{background:var(--teal);color:#fff}
+.class-txt h3{color:var(--teal)}
+@media (max-width:520px){.class-strip{padding:18px;border-radius:20px}}
 .class-strip>*{min-width:0}
-.class-txt h3{font-size:1.45rem;margin-top:12px}
+.class-txt h3{font-size:clamp(1.5rem,2.4vw,1.9rem);margin-top:12px}
 .class-txt p{margin-top:8px;font-size:16.5px}
-.class-pic{margin:0;background:#fff;border-radius:20px;padding:6px;border:1.5px solid #BFE0DC;box-shadow:0 14px 32px rgba(11,122,117,.12)}
+.class-pic{margin:0;background:#fff;border-radius:20px;padding:6px;border:1.5px solid #fff;box-shadow:0 14px 32px rgba(11,122,117,.12)}
 .class-pic img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:15px}
 @media (max-width:900px){.class-strip{grid-template-columns:1fr 1fr}.class-txt{grid-column:1/-1}}
 @media (max-width:520px){.class-strip{grid-template-columns:1fr}}
@@ -342,6 +345,16 @@ p{margin:0}
 .elig .btn.wa:hover{background:#08605C}
 .elig-ic{flex:none;width:42px;height:42px;border-radius:50%;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;font:700 20px Georgia,serif;font-style:italic}
 .elig-txt{flex:1;min-width:0}
+.part{border-radius:30px;padding:clamp(20px,3.5vw,40px);margin-top:36px}
+.part-nsda{background:linear-gradient(160deg,#fff 0%,var(--teal-soft) 100%);border:2px solid var(--teal);box-shadow:0 24px 50px rgba(11,122,117,.14)}
+.part-nsda .nsda{box-shadow:none;border-color:#BFE0DC}
+.part-own{background:linear-gradient(160deg,#fff 0%,var(--blush) 100%);border:2px solid var(--pink);box-shadow:0 24px 50px rgba(194,24,122,.12);margin-top:44px}
+.part-own .elig{border-color:#F1B5D3}
+.part-own .elig-ic{background:var(--blush-2);color:var(--pink)}
+.part-own .elig .btn.wa{background:var(--pink)}
+.part-own .elig .btn.wa:hover{background:var(--pink-dark)}
+.part .elig{margin-bottom:0}
+@media (max-width:520px){.part{border-radius:20px}}
 .sec-div{display:flex;align-items:center;gap:14px;margin:56px auto 44px;max-width:520px}
 .sec-div span{flex:1;height:1.5px;background:linear-gradient(90deg,transparent,#8FC7C1)}
 .sec-div span:last-child{background:linear-gradient(90deg,#8FC7C1,transparent)}
@@ -632,7 +645,7 @@ p{margin:0}
 <div class="stats" aria-label="Key facts">
   <div class="wrap">
     <div class="stat"><b><span class="num" data-from="1990" data-to="2005">2005</span></b><span>Exclusive established, 19 October</span></div>
-    <div class="stat"><b><span class="num" data-from="0" data-to="4.9" data-dec="1">4.9</span> <span class="star" aria-hidden="true">★</span></b><span>Google rating, 180 reviews</span></div>
+    <div class="stat"><b><span class="num" data-from="0" data-to="4.9" data-dec="1">4.9</span> <span class="star" aria-hidden="true">★</span></b><span>Google rating, 200+ reviews</span></div>
     <div class="stat"><b><span class="num" data-from="0" data-to="20">20</span>+</b><span>Women professionals</span></div>
     <div class="stat"><b><span class="num" data-from="0" data-to="3">3</span></b><span>Parlor · Academy · Yoga</span></div>
   </div>
@@ -742,14 +755,7 @@ p{margin:0}
         <div class="g-logo"><svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1C42.6 36.8 45 31.2 45 24.5z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.2a13 13 0 0 1 0-8.4v-5.7H4.5a22 22 0 0 0 0 19.8z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Google rating</div>
         <div class="big">4.9</div>
         <div class="stars" aria-hidden="true">★★★★★</div>
-        <p class="cnt">Based on 180 reviews</p>
-        <div class="bars" aria-label="Rating breakdown">
-          <div class="bar"><span>5★</span><i><b style="width:96.1%"></b></i><span>173</span></div>
-          <div class="bar"><span>4★</span><i><b style="width:1.7%"></b></i><span>3</span></div>
-          <div class="bar"><span>3★</span><i><b style="width:0%"></b></i><span>0</span></div>
-          <div class="bar"><span>2★</span><i><b style="width:0%"></b></i><span>0</span></div>
-          <div class="bar"><span>1★</span><i><b style="width:2.2%"></b></i><span>4</span></div>
-        </div>
+        <p class="cnt">Based on 200+ reviews</p>
         <a class="btn pink" href="https://maps.app.goo.gl/go43Bnu5kSg5Y7qv8" target="_blank" rel="noopener">Read all reviews</a>
         <a class="btn line" href="https://maps.app.goo.gl/go43Bnu5kSg5Y7qv8" target="_blank" rel="noopener">Write a review</a>
       </aside>
@@ -835,6 +841,7 @@ p{margin:0}
       <figure class="class-pic"><img src="images/classroom-2.jpg" alt="Exclusive Academy classroom from another angle, with hair care products on a shelf beside the whiteboard" loading="lazy" width="1400" height="933"></figure>
     </div>
 
+    <div class="part part-nsda">
     <div class="nsda">
       <div class="logos">
         <img src="images/bd-govt.png" alt="Government of the People's Republic of Bangladesh seal" width="360" height="360">
@@ -869,9 +876,9 @@ p{margin:0}
       </div>
       <a class="btn wa" href="https://wa.me/8801815858584" target="_blank" rel="noopener">Check my eligibility</a>
     </div>
+    </div>
 
-    <div class="sec-div" role="separator"><span></span><i></i><span></span></div>
-
+    <div class="part part-own">
     <h3 class="sub-h sub-logo" style="margin-top:0"><img class="round" src="images/academy-logo.png" alt="Beautyfication Course by Exclusive, Kaniz Hair &amp; Beauty logo" width="300" height="296">Exclusive courses by Kaniz Sultana</h3>
     <div class="courses" style="margin-top:0">
       <div class="course">
@@ -895,6 +902,7 @@ p{margin:0}
         <span>Fees for these private courses depend on the course and the skills you choose. Call or WhatsApp us for the current fee and the next batch date.</span>
       </div>
       <a class="btn wa" href="https://wa.me/8801815858584" target="_blank" rel="noopener">Ask about fees</a>
+    </div>
     </div>
 
     <ol class="steps" aria-label="How to join">
